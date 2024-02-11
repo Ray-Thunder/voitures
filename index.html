@@ -1,1 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.1O.1/simple-lightbox.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide slide-dw">
+          <p class="subtitle">Voiture</p>
+          <p class="title">Honda S2000</p>
+        </div>
+        <div class="swiper-slide slide-cd">
+          <p class="subtitle">Voiture de course</p>
+          <p class="title">RS5 DTM</p>
+        </div>
+        <div class="swiper-slide slide-cdeb">
+          <p class="subtitle">Formule 1</p>
+          <p class="title">Koenigsegg concept</p>
+        </div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
 
+    <main class="portfolio">
+      <div class="filters">
+        <ul>
+          <li data-filter="all" class="active">Toutes les voitures</li>
+          <li data-filter="ville">Voitures de ville</li>
+          <li data-filter="drift">Voitures de drift</li>
+          <li data-filter="course">Voitures de course</li>
+        </ul>
+      </div>
+
+      <div class="portfolio-elements">
+        <div class="card filtr-item" data-category="drift">
+          <div class="card-header">
+            <p class="card-title">Civic</p>
+            <div class="card-axe">Garage RCR</div>
+            <a href="images/civic.jpg">
+              <img src="images/civic.jpg" alt="Civic" />
+            </a>
+          </div>
+        </div>
+
+        <div class="card filtr-item" data-category="ville">
+          <div class="card-header">
+            <p class="card-title">Civic Type R</p>
+            <div class="card-axe">Honda</div>
+            <a href="images/civic_typer.jpg">
+              <img src="images/civic_typer.jpg" alt="Civic type R" />
+            </a>
+          </div>
+        </div>
+
+        <div class="card filtr-item" data-category="ville">
+          <div class="card-header">
+            <p class="card-title">Corvette C7 ZR1</p>
+            <div class="card-axe">Chevrolet</div>
+            <a href="images/corvette_c7.jpg">
+              <img src="images/corvette_c7.jpg" alt="Corvette C7" />
+            </a>
+          </div>
+        </div>
+
+        <div class="card filtr-item" data-category="course">
+          <div class="card-header">
+            <p class="card-title">F1 Concept</p>
+            <div class="card-axe">Koenigsegg</div>
+            <a href="images/koenigsegg.jpeg">
+              <img src="images/koenigsegg.jpeg" alt="Koenigsegg F1" />
+            </a>
+          </div>
+        </div>
+
+        <div class="card filtr-item" data-category="course">
+          <div class="card-header">
+            <p class="card-title">GT Vision</p>
+            <div class="card-axe">Nissan</div>
+            <a href="images/nissan_gtvision.jpg">
+              <img src="images/nissan_gtvision.jpg" alt="Nissan GT Vision" />
+            </a>
+          </div>
+        </div>
+
+        <div class="card filtr-item" data-category="course">
+          <div class="card-header">
+            <p class="card-title">RS5 Turbo DTM</p>
+            <div class="card-axe">Audi</div>
+            <a href="images/rs5.jpg">
+              <img src="images/rs5.jpg" alt="RS5 DTM" />
+            </a>
+          </div>
+        </div>
+
+        <div class="card filtr-item" data-category="drift">
+          <div class="card-header">
+            <p class="card-title">S2000</p>
+            <div class="card-axe">Honda</div>
+            <a href="images/s2000.jpeg">
+              <img src="images/s2000.jpeg" alt="Honda S2000" />
+            </a>
+          </div>
+        </div>
+
+        <div class="card filtr-item" data-category="drift">
+          <div class="card-header">
+            <p class="card-title">WRX STI Isle of Man</p>
+            <div class="card-axe">Subaru</div>
+            <a href="images/wrxsti.jpeg">
+              <img src="images/wrxsti.jpeg" alt="WRX STI" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="message-error">
+      <ul></ul>
+    </div>
+    <div class="message-success">Formulaire envoyé avec succés !</div>
+
+    <form action="" method="post" enctype="multipart/form-data">
+      <div>
+        <label for="pseudo">Pseudo</label>
+        <input type="text" name="pseudo" id="pseudo" />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" />
+      </div>
+      <div>
+        <label for="password">Mot de passe</label>
+        <input type="password" name="password" id="password" />
+      </div>
+      <div>
+        <label for="password2">Confirmation du mot de passe</label>
+        <input type="password" name="password2" id="password2" />
+      </div>
+
+      <button type="submit">S'inscrire</button>
+    </form>
+    <button class="dark-light">Dark mode</button>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.10.1/simple-lightbox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/filterizr/2.2.4/vanilla.filterizr.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
